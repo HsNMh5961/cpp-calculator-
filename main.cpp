@@ -5,6 +5,7 @@ using namespace std;
 long long calculate(const string& op, long long a, long long b) {
     if (op == "add") return a + b;
     if (op =="sub") return a - b;
+    if (op == "mul") return a * b;
     // OPERATIONS-END
     return 0;
 }
