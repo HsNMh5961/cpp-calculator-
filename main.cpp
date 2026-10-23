@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
-long long calculate(const string& op, long long a, long long b) {
+double calculate(const string& op, double a, double b) {
     if (op == "add") return a + b;
     if (op =="sub") return a - b;
     if (op == "mul") return a * b;
@@ -12,6 +13,9 @@ long long calculate(const string& op, long long a, long long b) {
     		return 0;
 		}
 		return a / b;
+	}
+	if (op == "pow"){
+		return pow(a, b);
 	}
 	cout << "invalid" << endl;
     // OPERATIONS-END
@@ -23,5 +27,6 @@ int main() {
     long long a, b;
     cin >> op >> a >> b;
     cout << calculate(op, a, b) << endl;
+    system("pause");
     return 0;
 }
